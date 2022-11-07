@@ -1,0 +1,27 @@
+.transactionHistory{
+  box-shadow: rgba(0, 0, 0, 0.35) 0 2px 5px;
+}
+
+.transactionHistory tr{
+  height: 60px;
+}
+
+.transactionHistory, th, td {
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  border-collapse: collapse;
+}
+
+.transactionHistory thead > tr{
+  background-color: #3c8ad9;
+  color: white;
+  text-transform: uppercase;
+}
+
+.transactionHistory td{
+  text-align: center;
+}
+
+.evenTr{
+  background-color: #e8e8e8;
+}
