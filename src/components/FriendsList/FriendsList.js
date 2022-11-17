@@ -1,29 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import s from './FriendsList.module.css';
-import classNames from 'classnames';
+import FriendListItem from './components/FriendListItem';
 
 const FriendsList = ({ friends }) => {
   return (
     <ul className={s.friendList}>
       {friends.map(friend => (
-        <li className={s.item} key={friend.id}>
-          <span
-            className={classNames([
-              s.status,
-              {
-                [s.online]: friend.isOnline,
-              },
-            ])}
-          ></span>
-          <img
-            className={s.avatar}
-            src={friend.avatar}
-            alt="User avatar"
-            width="48"
-          />
-          <p className={s.name}>{friend.name}</p>
-        </li>
+        <FriendListItem
+          key={friend.id}
+          name={friend.name}
+          isOnline={friend.isOnline}
+          avatar={friend.avatar}
+        />
       ))}
     </ul>
   );
